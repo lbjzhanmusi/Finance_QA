@@ -1,0 +1,10 @@
+注意：
+1 导入数据前编码格式： notepad++打开csv，编码->utf-8 无BOM格式，防止显示乱码
+2 重建neo4j数据库:   可以将graph.db删除，再导入. 方法：
+(1)关闭neo4j图形数据库，点击OpenFolder，找到文件夹，替换bin/import文件(csv替换)
+(2)删除\data\databases\目录下graph.db文件
+(3）管理员身份打开cmd命令窗口，cd 到bin目录下，输入如下命令：并回车即可。
+
+#导入Neo4j
+neo4j-admin import --database=graph.db --ignore-duplicate-nodes=true --nodes=import/stock.csv  --nodes=import/executive.csv  --nodes=import/concept.csv --nodes=import/industry.csv --nodes=import/area.csv --nodes=import/st.csv  --nodes=import/ctrlCompany.csv  --nodes=import/fund.csv  --relationships=import/executive_stock.csv --relationships=import/stock_concept.csv --relationships=import/stock_industry.csv --relationships=import/stock_area.csv --relationships=import/stock_st.csv   --relationships=import/ctrlCompany_stock.csv  --relationships=import/similar_fund_relation.csv
+ 
