@@ -1,0 +1,45 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- kg.aiml -->
+
+
+<!-- 使用公司代码查询行业类型 -->
+<category>
+    <pattern>* 的行业类型 * </pattern>
+        <template>
+            %1%<star index = "1"/>%的行业类型是：
+        </template>
+</category>
+
+<!-- 查询基金A的同系基金 -->
+<category>
+    <pattern>* 的同系基金 * </pattern>
+        <template>
+            %2%<star index = "1"/>%的同系基金是：
+        </template>
+</category>
+
+<!-- 查询xx行业有外资背景的企业 -->
+<category>
+    <pattern>* 有外资背景的企业 * </pattern>
+        <template>
+            %3%<star index = "1"/>%的外资背景企业有：
+        </template>
+</category>
+
+<!-- 查询某某行业有某某概念的企业 -->
+<category>
+    <pattern>* 有 * 的企业 * </pattern>
+        <template>
+            %4%<star index = "1"/>%<star index = "2"/>%有：
+        </template>
+</category>
+
+<!-- 查询某某公司的股票代码 -->
+<category>
+    <pattern>* 的股票代码是 * </pattern>
+        <template>
+            %5%<star index = "1"/>%的股票代码是：
+        </template>
+</category>
+
+</aiml>
